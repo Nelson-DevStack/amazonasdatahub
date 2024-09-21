@@ -1,6 +1,12 @@
 .Rproj.user
+<<<<<<< HEAD
 .DS_Store
 
 
 data/manaus.rda
+=======
+
+data/manaus.rda
+
+>>>>>>> f748c19 (experimental data)
 data/experimental.rda
