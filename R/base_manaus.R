@@ -1,4 +1,4 @@
-#' Manaus Minimum Monthly relative air humidity
+#' base_manaus - Time series with Extreme Values of Limited Range
 #'
 #' A time series dataset consisting of the minimum relative humidity observed in the city of Manaus from January 2009 to December 2020. This dataset is a sample of size n = 144 monthly blocks.
 #'
@@ -12,4 +12,4 @@
 #' }
 #' 
 #' @source Source information to be provided later
-"manaus"
+"base_manaus"
