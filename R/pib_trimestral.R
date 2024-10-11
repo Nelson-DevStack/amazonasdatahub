@@ -2,7 +2,7 @@
 #'
 #' This database contains information about the Gross Domestic Product (GDP) of the state of Amazonas over the years (from 2010 to 2021). It includes values in R$ 1,000,000.
 #'
-#' @format ## `pib_trimestral` A data frame with 48 rows and 21 columns:
+#' @format ## `pib_trimestral' A data frame with 48 rows and 21 columns:
 #' \describe{
 #'   \item{year}{Indicates the year in which the GDP info was collected}
 #'   \item{trimestre}{Specifies the quarter of the year}
