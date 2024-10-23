@@ -5,26 +5,26 @@
 #' @format ## `pib_trimestral' A data frame with 48 rows and 21 columns:
 #' \describe{
 #'   \item{year}{Indicates the year in which the GDP info was collected}
-#'   \item{trimestre}{Specifies the quarter of the year}
-#'   \item{agricultura_inclusive_apoio_a_agricultura_e_a_pos_colheita}{Refers to the economic output from agricultural activities, including cultivation, harvesting, and logistical support after harvest}
-#'   \item{pecuaria_inclusive_apoio_a_pecuaria}{Represents the economic contribution from livestock farming, covering meat, dairy production, and related support services}
-#'   \item{producao_florestal_pesca_e_aquicultura}{Outputs from forestry (timber and non-timber products), fishing activities and aquaculture (fish farming)}
-#'   \item{industrias_extrativas}{Extraction of natural resources as minearls and oil}
-#'   \item{industrias_de_transformacao}{Refers to the transformation of raw materials into finished goods.}
-#'   \item{eletricidade_e_gas_agua_esgoto_atividades_de_gestao_de_residuos_e_descontaminacao}{Encompasses services related to electricity and gas generation, water supply, sewage treatment, and waste management.}
-#'  \item{construcao}{Represents economic activities related to building construction.}
-#'  \item{comercio_e_reparacao_de_veiculos_automotores_e_motocicletas}{Includes all commercial activities related to selling goods and services as well as vehicle repair services.}
-#'  \item{transporte_armazenagem_e_correio}{Covers services related to transporting people and goods, storage facilities, and postal services.}
-#'  \item{alojamento_e_alimentacao}{Refers to economic activities in tourism-related sectors such as hotels and restaurants.}
-#'  \item{informacao_e_comunicacao}{Encompasses sectors dealing with information technology and telecommunications.}
-#'  \item{atividades_financeiras_de_seguros_e_servicos_relacionados}{Includes banks, financial institutions, insurance companies, and various financial services.}
-#'  \item{atividades_imobiliarias}{Refers to transactions involving buying, selling, or renting properties.}
-#'  \item{atividades_profissionais_cientificas_e_tecnicas_administrativas_e_servicos_complementares}{Covers a wide range of specialized professional services including consulting and administrative support.}
-#'  \item{administracao_defesa_educacao_e_saude_publicas_e_seguridade_social}{Represents public sector spending on government administration, national defense, public education, health care services, and social security programs.}
-#'  \item{educacao_e_saude_privadas}{Refers to educational institutions and health care providers operating in the private sector.}
-#'  \item{artes_cultura_esporte_e_recreacao_e_outras_atividades_de_servicos}{Encompasses activities related to entertainment, cultural events, sports facilities, and other service-oriented sectors.}
-#'  \item{servicos_domesticos}{Includes personal services provided within households such as cleaning or caregiving.}
-#'  \item{impostos}{Represents taxes levied on goods and services included in GDP calculations.}
+#'   \item{quarter}{Specifies the quarter of the year}
+#'   \item{agriculture}{Refers to the economic output from agricultural activities, including cultivation, harvesting, and logistical support after harvest}
+#'   \item{livestock}{Represents the economic contribution from livestock farming, covering meat, dairy production, and related support services}
+#'   \item{forest_fishing_prod}{Outputs from forestry (timber and non-timber products), fishing activities and aquaculture (fish farming)}
+#'   \item{extractive_ind}{Extractive industries of natural resources as minearls and oil}
+#'   \item{manufacturing_ind}{Refers to the transformation of raw materials into finished goods industries}
+#'   \item{basic_infrastructure}{Encompasses services related to electricity and gas generation, water supply, sewage treatment, and waste management.}
+#'  \item{construction}{Represents economic activities related to building construction.}
+#'  \item{vehicle_retail_repair}{Includes all commercial activities related to selling goods and services as well as vehicle repair services.}
+#'  \item{transport_storage_post}{Covers services related to transporting people and goods, storage facilities, and postal services.}
+#'  \item{accomodation_food}{Refers to economic activities in tourism-related sectors such as hotels and restaurants.}
+#'  \item{information_communication}{Encompasses sectors dealing with information technology and telecommunications.}
+#'  \item{financial_activities}{Includes banks, financial institutions, insurance companies, and various financial services.}
+#'  \item{real_state_activities}{Refers to transactions involving buying, selling, or renting properties.}
+#'  \item{professional_activities}{Covers a wide range of specialized professional services including consulting and administrative support.}
+#'  \item{public_admin_defense_health_edu}{Represents public sector spending on government administration, national defense, public education, health care services, and social security programs.}
+#'  \item{private_edu_health}{Refers to educational institutions and health care providers operating in the private sector.}
+#'  \item{art_culture_sport}{Encompasses activities related to entertainment, cultural events, sports facilities, and other service-oriented sectors.}
+#'  \item{domestic_services}{Includes personal services provided within households such as cleaning or caregiving.}
+#'  \item{taxes}{Represents taxes levied on goods and services included in GDP calculations.}
 #' }
 #' 
 #' @source Scientific Journal of Applied Social and Clinical Science - TIME SERIES ANALYSIS FOR THE QUARTERLY GROSS DOMESTIC PRODUCT OF AMAZONAS
