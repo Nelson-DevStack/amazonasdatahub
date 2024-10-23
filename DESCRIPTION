@@ -2,8 +2,7 @@ Package: amazonasdatahub
 Title: A Data Library in R 
 Version: 0.0.0.9000
 Authors@R: 
-    person("Nelson", "Carvalho", "nelsoncarvalho.negocios@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Nelson", "Carvalho", email = "nelsoncarvalho.negocios@gmail.com", role = c("aut", "cre"))
 Description: A package of various datasets from the state of Amazonas (AM), Brazil, to which Deep Learning can be applied. 
 License: MIT + file LICENSE
 Encoding: UTF-8
