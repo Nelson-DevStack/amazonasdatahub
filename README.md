@@ -1,6 +1,8 @@
 
 # amazonasdatahub
 
+![Amazonas DataHub Logo](./assets/Presentation.png "Amazonas DataHub logo")
+
 <!-- badges: start -->
 <!-- badges: end -->
 
