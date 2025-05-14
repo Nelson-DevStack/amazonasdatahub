@@ -46,6 +46,7 @@ You can see the documentation of each dataset using the help operator "?".
 ?malaria_amazonas
 ?pib_trimestral
 ?rionegro_amazonas
+?school_read_levels
 ```
 
 
