@@ -1,6 +1,6 @@
 #' agriculture_idam - Plant production data from the Institute of Sustainable Agricultural and Forestry Development of Amazonas - IDAM (2023).
 #'
-#' This database, which is the consolidation of data from IDAM's activity reports, provides crop production data for crops that this institute considers a priority."
+#' This database, which is the consolidation of data from IDAM's activity reports, provides crop production data for crops that this institute considers a priority.
 #'
 #' @format ## `agriculture_idam' A data frame with 1072 rows and 13 columns:
 #' \describe{

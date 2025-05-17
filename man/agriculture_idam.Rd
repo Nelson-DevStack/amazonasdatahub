@@ -31,6 +31,6 @@ https://www.idam.am.gov.br/biblioteca/relatorio-de-atividades-rat-23-2/
 agriculture_idam
 }
 \description{
-This database, which is the consolidation of data from IDAM's activity reports, provides crop production data for crops that this institute considers a priority."
+This database, which is the consolidation of data from IDAM's activity reports, provides crop production data for crops that this institute considers a priority.
 }
 \keyword{datasets}
