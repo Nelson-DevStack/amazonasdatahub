@@ -1,9 +1,9 @@
 Package: amazonasdatahub
-Title: A Data Library in R 
+Title: Datasets from Amazonas (AM) to apply Deep Learning and statistical methods.
 Version: 0.0.0.9000
 Authors@R: 
     person("Nelson", "Carvalho", email = "nelsoncarvalho.negocios@gmail.com", role = c("aut", "cre"))
-Description: A package of various datasets from the state of Amazonas (AM), Brazil, to which Deep Learning can be applied. 
+Description: A package of various datasets from the state of Amazonas (AM), Brazil, to apply Deep Learning and statistical methods.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
