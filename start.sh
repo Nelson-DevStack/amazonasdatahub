@@ -14,5 +14,5 @@ open http://localhost:8787
 
 docker run -e PASSWORD="$1" -p 8787:8787 \
   -v "$(pwd)":/home/rstudio/output \
-  -v /home/nelsonworkstation/Documents/work/amazonasdatahub:/home/rstudio/amazonasdatahub \
+  -v /home/$2/Documents/work/amazonasdatahub:/home/rstudio/amazonasdatahub \
   --rm amazonasdatahub
