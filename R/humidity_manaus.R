@@ -12,4 +12,23 @@
 #' }
 #' 
 #' @source NASCIMENTO, Leonardo Brandão Freitas; LIMA, Max Sousa; DUCZMAL, Luiz H. P-min-stable regression models for time series with extreme values of limited range. Environmetrics, Issue 2, v. 36, 2025.
+#' 
+#' @examples
+#' # Relative humidity time series of Amazonas
+#' # Loading dplyr and ggplot to structure the data
+#' require(dplyr)
+#' require(ggplot2)
+#' 
+#' # Creating date column and plotting the time series
+#' humidity_manaus %>%
+#'   mutate(date = as.Date(paste0(year, "-", month, "-","01"))) %>%
+#'   ggplot(aes(x = date, y = rh)) +
+#'   geom_line() +
+#'   theme_minimal() +
+#'   labs(
+#'     title = "Relative Humidity of Amazonas (2010 - 2020)",
+#'     x = "Date",
+#'     y = "Relative Humidity"
+#'   )
+#' 
 "humidity_manaus"

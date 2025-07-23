@@ -41,4 +41,34 @@ pib_trimestral
 \description{
 This database contains information about the Gross Domestic Product (GDP) of the state of Amazonas over the years (from 2010 to 2021). It includes values in R$ 1,000,000.
 }
+\examples{
+\donttest{
+# Time series - Gross Domestic Product of Amazonas
+# Loading dplyr and ggplot2
+require(dplyr)
+require(ggplot2)
+
+# Selecting only year and taxes and ploting
+pib_trimestral \%>\%
+  select(year, taxes) \%>\%
+  ggplot(., aes(x = year, y = taxes)) +
+  geom_line(linewidth = 1L, colour = "#cb181d") +
+  geom_hline(
+    yintercept = mean(pib_trimestral$taxes),
+    linetype = "dashed",
+    size = 1
+  ) +
+  theme_light() +
+  theme(
+    plot.title = element_text(face = "bold", size = 16)
+  ) +
+  labs(
+    x = "Year",
+    y = "Taxes",
+    title = "Quarterly GDP of Amazonas",
+    subtitle = "2010 - 2021"
+  )
+}
+
+}
 \keyword{datasets}

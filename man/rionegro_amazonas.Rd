@@ -26,4 +26,23 @@ rionegro_amazonas
 \description{
 This dataset contains data of the Rio Negro River level in the state of Amazonas (Brazil), compiling information on years, semesters and days, along with the river's level in meters and whether it filled or dropped (in centimeters).
 }
+\examples{
+\donttest{
+# Rio Negro - Boxplot (water level by year)
+
+# Loading ggplot
+require(ggplot2)
+
+rionegro_amazonas \%>\%
+  ggplot(aes(x = year, y = level_m, group = year)) +
+  stat_boxplot(geom = "errorbar") +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(
+    x = "Year",
+    y = "Water level (m)"
+  )
+} 
+
+}
 \keyword{datasets}

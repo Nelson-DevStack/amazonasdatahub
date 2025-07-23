@@ -21,4 +21,18 @@
 #'
 #' @source https://www.idam.am.gov.br/biblioteca/relatorio-de-atividades-rat-23-2/
 #'
+#' @examples
+#' \donttest{
+#' # Cassava production plot (Gráfico de Produção de Mandioca)
+#' mandioca_prod <- agriculture_idam[agriculture_idam$cultivation == "Mandioca", ]
+#' plot(
+#'   mandioca_prod$planted,
+#'   mandioca_prod$harvested,
+#'   xlab = "Planted area (hectare)",
+#'   ylab = "Harvested area (hectare)",
+#'   main = "Cassava production in Amazonas",
+#'   sub = "Planted area x Harvested Area"
+#' )
+#' }
+#' 
 "agriculture_idam"

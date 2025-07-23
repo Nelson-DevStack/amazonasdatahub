@@ -33,4 +33,19 @@ agriculture_idam
 \description{
 This database, which is the consolidation of data from IDAM's activity reports, provides crop production data for crops that this institute considers a priority.
 }
+\examples{
+\donttest{
+# Cassava production plot (Gráfico de Produção de Mandioca)
+mandioca_prod <- agriculture_idam[agriculture_idam$cultivation == "Mandioca", ]
+plot(
+  mandioca_prod$planted,
+  mandioca_prod$harvested,
+  xlab = "Planted area (hectare)",
+  ylab = "Harvested area (hectare)",
+  main = "Cassava production in Amazonas",
+  sub = "Planted area x Harvested Area"
+)
+}
+
+}
 \keyword{datasets}

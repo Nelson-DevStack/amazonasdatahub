@@ -14,4 +14,22 @@
 #' 
 #' @source https://portodemanaus.com.br/nivel-do-rio-negro/
 #' 
+#' @examples
+#' \donttest{
+#' # Rio Negro - Boxplot (water level by year)
+#' 
+#' # Loading ggplot
+#' require(ggplot2)
+#' 
+#' rionegro_amazonas %>%
+#'   ggplot(aes(x = year, y = level_m, group = year)) +
+#'   stat_boxplot(geom = "errorbar") +
+#'   geom_boxplot() +
+#'   theme_minimal() +
+#'   labs(
+#'     x = "Year",
+#'     y = "Water level (m)"
+#'   )
+#'} 
+#' 
 "rionegro_amazonas"

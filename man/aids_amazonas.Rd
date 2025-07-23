@@ -25,4 +25,28 @@ aids_amazonas
 \description{
 This dataset contains data of the AIDS occurrences in each municipality from Amazonas.
 }
+\examples{
+\donttest{
+# Aids - case count in Manaus
+# Loading dplyr and ggplot to structure the data
+require(dplyr)
+require(ggplot2)
+
+# Filtering by municipality and ploting case count by gender
+aids_amazonas \%>\%
+  filter(name_muni == "Manaus") \%>\%
+  group_by(gender) \%>\%
+  ggplot(aes(x = year, y = cases, group = gender, color = gender)) +
+  geom_line() +
+  scale_color_manual(values = c("blue", "red")) +
+  theme_minimal() +
+  labs(
+    title = "AIDS ocurrences in Manaus (2011-2023)",
+    x = "Year",
+    y = "Case count",
+    color = "Gender"
+  )
+}
+
+}
 \keyword{datasets}

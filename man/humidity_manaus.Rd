@@ -25,4 +25,23 @@ humidity_manaus
 \description{
 A time series dataset consisting of the minimum relative humidity observed in the city of Manaus from January 2009 to December 2020. This dataset is a sample of size n = 144 monthly blocks.
 }
+\examples{
+# Relative humidity time series of Amazonas
+# Loading dplyr and ggplot to structure the data
+require(dplyr)
+require(ggplot2)
+
+# Creating date column and plotting the time series
+humidity_manaus \%>\%
+  mutate(date = as.Date(paste0(year, "-", month, "-","01"))) \%>\%
+  ggplot(aes(x = date, y = rh)) +
+  geom_line() +
+  theme_minimal() +
+  labs(
+    title = "Relative Humidity of Amazonas (2010 - 2020)",
+    x = "Date",
+    y = "Relative Humidity"
+  )
+
+}
 \keyword{datasets}
