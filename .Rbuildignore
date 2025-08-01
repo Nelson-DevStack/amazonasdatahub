@@ -1,3 +1,7 @@
 ^amazonasdatahub\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^Dockerfile$
+^start.sh$
+^codes$
+^assets$

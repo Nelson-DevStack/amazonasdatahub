@@ -11,16 +11,18 @@
 #'   \item{year}{Measurement year}
 #'   \item{semester}{Measurement semester}
 #' }
-#' 
+#'
 #' @source https://portodemanaus.com.br/nivel-do-rio-negro/
-#' 
+#'
+#' @importFrom dplyr %>% filter
+#' @importFrom ggplot2 ggplot aes geom_boxplot stat_boxplot theme_minimal
 #' @examples
-#' \donttest{
 #' # Rio Negro - Boxplot (water level by year)
-#' 
+#'
 #' # Loading ggplot
 #' require(ggplot2)
-#' 
+#' require(dplyr)
+#'
 #' rionegro_amazonas %>%
 #'   ggplot(aes(x = year, y = level_m, group = year)) +
 #'   stat_boxplot(geom = "errorbar") +
@@ -30,6 +32,5 @@
 #'     x = "Year",
 #'     y = "Water level (m)"
 #'   )
-#'} 
-#' 
+#'
 "rionegro_amazonas"
