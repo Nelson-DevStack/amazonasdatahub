@@ -27,7 +27,7 @@ You can install the development version of amazonasdatahub from
 ``` r
 # Install devtools package
 install.packages("devtools")
-#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f7b3407b1'
+#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f3c895581'
 #> (as 'lib' is unspecified)
 
 # Load devtools
@@ -39,13 +39,13 @@ devtools::install_github("Nelson-DevStack/amazonasdatahub")
 #> Downloading GitHub repo Nelson-DevStack/amazonasdatahub@HEAD
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#> * checking for file ‘/tmp/Rtmp1TpdD9/remotes48331ec9b66/Nelson-DevStack-amazonasdatahub-0ffb428/DESCRIPTION’ ... OK
+#> * checking for file ‘/tmp/RtmpzdfkcN/remotes9e8622861bd/Nelson-DevStack-amazonasdatahub-0ffb428/DESCRIPTION’ ... OK
 #> * preparing ‘amazonasdatahub’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
 #> * checking for empty or unneeded directories
 #> * building ‘amazonasdatahub_0.0.0.9000.tar.gz’
-#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f7b3407b1'
+#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f3c895581'
 #> (as 'lib' is unspecified)
 ```
 
@@ -82,22 +82,19 @@ sex/gender of each observation. To do this, we will use the dplyr
 package to structure the data and the ggplot2 package to create and
 customize the chart.
 
-``` r
-# Loading dplyr and ggplot to structure the data
-require(dplyr)
-#> Loading required package: dplyr
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
-require(ggplot2)
-#> Loading required package: ggplot2
+    #> Loading required package: dplyr
+    #> 
+    #> Attaching package: 'dplyr'
+    #> The following objects are masked from 'package:stats':
+    #> 
+    #>     filter, lag
+    #> The following objects are masked from 'package:base':
+    #> 
+    #>     intersect, setdiff, setequal, union
+    #> Loading required package: ggplot2
 
-# Filtering by municipality and ploting case count by gender
+``` r
+# Filtering by municipality and plotting case count by gender
 aids_amazonas %>%
   filter(name_muni == "Manaus") %>%
   group_by(gender) %>%
@@ -113,4 +110,4 @@ aids_amazonas %>%
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />

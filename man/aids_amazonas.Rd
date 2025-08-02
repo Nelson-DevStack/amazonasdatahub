@@ -32,7 +32,7 @@ This dataset contains data of the AIDS occurrences in each municipality from Ama
 require(dplyr)
 require(ggplot2)
 
-# Filtering by municipality and ploting case count by gender
+# Filtering by municipality and plotting case count by gender
 aids_amazonas \%>\%
   filter(name_muni == "Manaus") \%>\%
   group_by(gender) \%>\%

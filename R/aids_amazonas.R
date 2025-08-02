@@ -10,17 +10,17 @@
 #'   \item{gender}{Gender of the infected individual - M for Male and F for female}
 #'   \item{year}{Year of observation}
 #' }
-#' 
+#'
 #' @source https://indicadores.aids.gov.br/
-#' 
+#'
 #' @examples
 #' \donttest{
 #' # Aids - case count in Manaus
 #' # Loading dplyr and ggplot to structure the data
 #' require(dplyr)
 #' require(ggplot2)
-#' 
-#' # Filtering by municipality and ploting case count by gender
+#'
+#' # Filtering by municipality and plotting case count by gender
 #' aids_amazonas %>%
 #'   filter(name_muni == "Manaus") %>%
 #'   group_by(gender) %>%
@@ -35,5 +35,5 @@
 #'     color = "Gender"
 #'   )
 #' }
-#' 
+#'
 "aids_amazonas"
