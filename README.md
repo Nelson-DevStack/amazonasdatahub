@@ -27,7 +27,7 @@ You can install the development version of amazonasdatahub from
 ``` r
 # Install devtools package
 install.packages("devtools")
-#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f3c895581'
+#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f6a873321'
 #> (as 'lib' is unspecified)
 
 # Load devtools
@@ -39,13 +39,13 @@ devtools::install_github("Nelson-DevStack/amazonasdatahub")
 #> Downloading GitHub repo Nelson-DevStack/amazonasdatahub@HEAD
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#> * checking for file ‘/tmp/RtmpzdfkcN/remotes9e8622861bd/Nelson-DevStack-amazonasdatahub-0ffb428/DESCRIPTION’ ... OK
+#> * checking for file ‘/tmp/RtmpgTTdiZ/remotesbac73bb7b51/Nelson-DevStack-amazonasdatahub-0ffb428/DESCRIPTION’ ... OK
 #> * preparing ‘amazonasdatahub’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
 #> * checking for empty or unneeded directories
 #> * building ‘amazonasdatahub_0.0.0.9000.tar.gz’
-#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f3c895581'
+#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f6a873321'
 #> (as 'lib' is unspecified)
 ```
 
@@ -82,16 +82,11 @@ sex/gender of each observation. To do this, we will use the dplyr
 package to structure the data and the ggplot2 package to create and
 customize the chart.
 
-    #> Loading required package: dplyr
-    #> 
-    #> Attaching package: 'dplyr'
-    #> The following objects are masked from 'package:stats':
-    #> 
-    #>     filter, lag
-    #> The following objects are masked from 'package:base':
-    #> 
-    #>     intersect, setdiff, setequal, union
-    #> Loading required package: ggplot2
+``` r
+# Loading dplyr and ggplot to structure the data
+require(dplyr)
+require(ggplot2)
+```
 
 ``` r
 # Filtering by municipality and plotting case count by gender

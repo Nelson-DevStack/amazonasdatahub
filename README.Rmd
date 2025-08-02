@@ -67,7 +67,7 @@ The dataset ```aids_amazonas``` contains data of the AIDS occurrences in each mu
 
 One of the analysis that can be made is: visualize the time series of counts filtered by municipality, where each case is grouped by the sex/gender of each observation. To do this, we will use the dplyr package to structure the data and the ggplot2 package to create and customize the chart.
 
-```{r, echo=FALSE}
+```{r message=FALSE, results='hide', warning=FALSE}
 # Loading dplyr and ggplot to structure the data
 require(dplyr)
 require(ggplot2)
