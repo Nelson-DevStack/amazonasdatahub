@@ -7,10 +7,18 @@ USER root
 
 RUN chown -R rstudio:rstudio /home/rstudio
 
+RUN apt-get update && apt-get install -y \
+  imagemagick \
+  libmagick++-dev \
+  libmagickwand-dev \
+  && rm -rf /var/lib/apt/lists/*
+
 RUN install2.r --error --skipinstalled --deps TRUE \
   usethis \
   devtools \
+  magick \
   && rm -rf /tmp/downloaded_packages/
+
 
 WORKDIR /home/rstudio/amazonasdatahub
 

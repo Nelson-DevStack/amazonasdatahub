@@ -1,53 +1,116 @@
 
-# amazonasdatahub
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-![Amazonas DataHub Logo](./assets/Presentation.png "Amazonas DataHub logo")
+# amazonasdatahub <img src="man/figures/logo.png" align="right" height="139" alt="Amazonasd DataHub logo">
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-## Overview
+The goal of amazonasdatahub is to gather various data sets from the
+state of Amazonas (AM), Brazil, to which Deep Learning can be applied.
 
-The goal of amazonasdatahub is to gather various data sets from the state of Amazonas (AM), Brazil, to which Deep Learning can be applied.
-
-With this open-source R package, you will have access to various datasets to apply Deep Learning and statistical methods.
+With this open-source R package, you will have access to various
+datasets to apply Deep Learning and statistical methods.
 
 ## Installation
 
-To install amazonasdatahub, you need to have the following tools installed on your computer or development environment:
+To install amazonasdatahub, you need to have the following tools
+installed on your computer or development environment:
 
 - R version 4.41.1 (2024-06-14) – “Race for Your Life”;
-- ```devtools``` package from R.
+- devtools package from R.
 
+You can install the development version of amazonasdatahub from
+[GitHub](https://github.com/) with:
 
-```r
+``` r
 # Install devtools package
 install.packages("devtools")
+#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f7b3407b1'
+#> (as 'lib' is unspecified)
 
 # Load devtools
 library(devtools)
+#> Loading required package: usethis
 
 # installing amazonasdatahub
 devtools::install_github("Nelson-DevStack/amazonasdatahub")
+#> Downloading GitHub repo Nelson-DevStack/amazonasdatahub@HEAD
+#> 
+#> ── R CMD build ─────────────────────────────────────────────────────────────────
+#> * checking for file ‘/tmp/Rtmp1TpdD9/remotes48331ec9b66/Nelson-DevStack-amazonasdatahub-0ffb428/DESCRIPTION’ ... OK
+#> * preparing ‘amazonasdatahub’:
+#> * checking DESCRIPTION meta-information ... OK
+#> * checking for LF line-endings in source and make files and shell scripts
+#> * checking for empty or unneeded directories
+#> * building ‘amazonasdatahub_0.0.0.9000.tar.gz’
+#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f7b3407b1'
+#> (as 'lib' is unspecified)
 ```
 
 ## Usage
 
-Once the ```amazonasdatahub``` is installed, use library() or require() to load the package.
+Once the `amazonasdatahub` is installed, use library() or require() to
+load the package.
 
-```r
+``` r
 library(amazonasdatahub)
 ```
 
-You can see the documentation of each dataset using the help operator "?".
-```r
+You can see the documentation of each dataset using the help operator
+“?”.
+
+``` r
+?agriculture_idam
 ?aids_amazonas
-?base_manaus
+?humidity_manaus
 ?malaria_amazonas
 ?pib_trimestral
 ?rionegro_amazonas
 ?school_read_levels
-?agriculture_idam
 ```
 
+## Example
 
+The dataset `aids_amazonas` contains data of the AIDS occurrences in
+each municipality from Amazonas.
+
+One of the analysis that can be made is: visualize the time series of
+counts filtered by municipality, where each case is grouped by the
+sex/gender of each observation. To do this, we will use the dplyr
+package to structure the data and the ggplot2 package to create and
+customize the chart.
+
+``` r
+# Loading dplyr and ggplot to structure the data
+require(dplyr)
+#> Loading required package: dplyr
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
+require(ggplot2)
+#> Loading required package: ggplot2
+
+# Filtering by municipality and ploting case count by gender
+aids_amazonas %>%
+  filter(name_muni == "Manaus") %>%
+  group_by(gender) %>%
+  ggplot(aes(x = year, y = cases, group = gender, color = gender)) +
+  geom_line() +
+  scale_color_manual(values = c("blue", "red")) +
+  theme_minimal() +
+  labs(
+    title = "AIDS ocurrences in Manaus (2011-2023)",
+    x = "Year",
+    y = "Case count",
+    color = "Gender"
+  )
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
