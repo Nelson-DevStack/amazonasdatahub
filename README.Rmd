@@ -31,7 +31,7 @@ To install amazonasdatahub, you need to have the following tools installed on yo
 
 You can install the development version of amazonasdatahub from [GitHub](https://github.com/) with:
 
-```{r}
+```{r eval=FALSE}
 # Install devtools package
 install.packages("devtools")
 

@@ -27,26 +27,12 @@ You can install the development version of amazonasdatahub from
 ``` r
 # Install devtools package
 install.packages("devtools")
-#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f6a873321'
-#> (as 'lib' is unspecified)
 
 # Load devtools
 library(devtools)
-#> Loading required package: usethis
 
 # installing amazonasdatahub
 devtools::install_github("Nelson-DevStack/amazonasdatahub")
-#> Downloading GitHub repo Nelson-DevStack/amazonasdatahub@HEAD
-#> 
-#> ── R CMD build ─────────────────────────────────────────────────────────────────
-#> * checking for file ‘/tmp/RtmpgTTdiZ/remotesbac73bb7b51/Nelson-DevStack-amazonasdatahub-0ffb428/DESCRIPTION’ ... OK
-#> * preparing ‘amazonasdatahub’:
-#> * checking DESCRIPTION meta-information ... OK
-#> * checking for LF line-endings in source and make files and shell scripts
-#> * checking for empty or unneeded directories
-#> * building ‘amazonasdatahub_0.0.0.9000.tar.gz’
-#> Installing package into '/tmp/RtmpAqX7Te/temp_libpath15f6a873321'
-#> (as 'lib' is unspecified)
 ```
 
 ## Usage
