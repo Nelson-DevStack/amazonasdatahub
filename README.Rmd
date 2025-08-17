@@ -73,7 +73,7 @@ require(dplyr)
 require(ggplot2)
 ```
 
-```{r}
+```{r, dpi = 300}
 # Filtering by municipality and plotting case count by gender
 aids_amazonas %>%
   filter(name_muni == "Manaus") %>%
