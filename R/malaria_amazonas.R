@@ -3,17 +3,13 @@
 #'
 #' This dataset contains medical records of patients who underwent malaria screening tests in the Legal Amazon. The data in this dataset were filtered to include only the cases reported in the state of Amazonas and for patients who reside specifically in the state of Amazonas.
 #'
-#' @format ## `malaria_amazonas' A data frame with 1098620 rows and 40 columns:
+#' @format ## `malaria_amazonas' A data frame with 1098620 rows and 36 columns:
 #' \describe{
-#'   \item{notification_state}{State of notification}
-#'   \item{notification_rh}{Health region of notification}
+#'   \item{notification_hr}{Health region of notification}
 #'   \item{notification_county}{County of notification}
-#'   \item{infection_country}{Probable county where the patient was infected}
 #'   \item{infection_state}{Probable state where the patient was infected}
 #'   \item{infection_hr}{Probable health region where the patient was infected}
 #'   \item{infection_county}{Probable county where the patient was infected}
-#'   \item{home_country}{Country of residence of the patient}
-#'   \item{home_state}{State of residence of the patient}
 #'   \item{home_hr}{Health region of residence of the patient}
 #'   \item{home_county}{County of residence of the patient}
 #'   \item{exam_interval}{Time interval between notification and examination}
