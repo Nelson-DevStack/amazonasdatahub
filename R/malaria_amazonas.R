@@ -5,49 +5,72 @@
 #'
 #' @format ## `malaria_amazonas' A data frame with 1098620 rows and 40 columns:
 #' \describe{
-#'   \item{notification.state}{State of notification}
-#'   \item{notification.rh}{Health region of notification}
-#'   \item{notification.county}{County of notification}
-#'   \item{infection.country}{Probable county where the patient was infected}
-#'   \item{infection.state}{Probable state where the patient was infected}
-#'   \item{infection.hr}{Probable health region where the patient was infected}
-#'   \item{infection.county}{Probable county where the patient was infected}
-#'   \item{home.country}{Country of residence of the patient}
-#'   \item{home.state}{State of residence of the patient}
-#'   \item{home.hr}{Health region of residence of the patient}
-#'   \item{home.county}{County of residence of the patient}
-#'   \item{exam.interval}{Time interval between notification and examination}
-#'   \item{treatment.interval}{Time interval between examination and beginning of treatment}
-#'   \item{notification.interval}{Time interval between symptom and notification}
-#'   \item{notification.month}{Month in which the notification was recorded}
-#'   \item{notification.year}{Year in which the notification was recorded}
-#'   \item{symptom.month}{Month in which the patient felt the first symptoms of malaria}
-#'   \item{symptom.year}{Year in which the patient felt the first symptoms of malaria}
-#'   \item{exam.month}{Month in which the examination was performed}
-#'   \item{exam.year}{Year in which the examination was performed}
-#'   \item{treatment.month}{Month in which the treatment started}
-#'   \item{treatment.year}{Year in which the treatment started}
+#'   \item{notification_state}{State of notification}
+#'   \item{notification_rh}{Health region of notification}
+#'   \item{notification_county}{County of notification}
+#'   \item{infection_country}{Probable county where the patient was infected}
+#'   \item{infection_state}{Probable state where the patient was infected}
+#'   \item{infection_hr}{Probable health region where the patient was infected}
+#'   \item{infection_county}{Probable county where the patient was infected}
+#'   \item{home_country}{Country of residence of the patient}
+#'   \item{home_state}{State of residence of the patient}
+#'   \item{home_hr}{Health region of residence of the patient}
+#'   \item{home_county}{County of residence of the patient}
+#'   \item{exam_interval}{Time interval between notification and examination}
+#'   \item{treatment_interval}{Time interval between examination and beginning of treatment}
+#'   \item{notification_interval}{Time interval between symptom and notification}
+#'   \item{notification_month}{Month in which the notification was recorded}
+#'   \item{notification_year}{Year in which the notification was recorded}
+#'   \item{symptom_month}{Month in which the patient felt the first symptoms of malaria}
+#'   \item{symptom_year}{Year in which the patient felt the first symptoms of malaria}
+#'   \item{exam_month}{Month in which the examination was performed}
+#'   \item{exam_year}{Year in which the examination was performed}
+#'   \item{treatment_month}{Month in which the treatment started}
+#'   \item{treatment_year}{Year in which the treatment started}
 #'   \item{migration}{Health region of residence different than that of notification}
-#'   \item{autochthonous.case}{Health region of infection identical to that of residence}
-#'   \item{exam.result}{Result of examination}
-#'   \item{detection.type}{Type of detection}
-#'   \item{exam.type}{Type of examination}
+#'   \item{autochthonous_case}{Health region of infection identical to that of residence}
+#'   \item{exam_result}{Result of examination}
+#'   \item{detection_type}{Type of detection}
+#'   \item{exam_type}{Type of examination}
 #'   \item{symptom}{Indicates if the patient felt a symptom}
 #'   \item{hemiparasite}{The result of the examination for other hemiparasites}
-#'   \item{previous.treatment}{Previous treatment for P. vivax or P.falciparum}
+#'   \item{previous_treatment}{Previous treatment for P. vivax or P.falciparum}
 #'   \item{occupation}{Main activity in the last 15 days}
-#'   \item{education.level}{Level of education of the patient}
+#'   \item{education_level}{Level of education of the patient}
 #'   \item{age}{Interval of the age of  the patient}
 #'   \item{race}{Race/color of the patient}
 #'   \item{gender}{Gender of the patient}
 #'   \item{pregnancy}{Indicates pregnancy and the gestational age}
 #'   \item{crosses}{Indicates the amount of parasitemia in crosses}
-#'   \item{cvl.case}{Indicates the existence of cases of canine visceral leishmaniasis}
+#'   \item{cvl_case}{Indicates the existence of cases of canine visceral leishmaniasis}
 #'   \item{scheme}{Indicates the treatment scheme employed}
-#'   \item{qty.parasites}{Indicates the number of parasites per mm^3}
+#'   \item{qty_parasites}{Indicates the number of parasites per mm^3}
 #'   \item{month}{The month in which this data was observed}
 #' }
-#' 
+#'
 #' @source https://www.synapse.org/Synapse:syn21552203/files
 #'
+#'@examples
+#'\donttest{
+#' # Bar plot of malaria tests results (2019)
+#' malaria_amazonas %>%
+#'   filter(exam_year == 2019) %>%
+#'   count(exam_result) %>%
+#'   ggplot(aes(x = reorder(exam_result, -n), y = n)) +
+#'   geom_bar(stat = "identity") +
+#'   geom_text(
+#'     aes(label = n),
+#'     vjust = -0.5
+#'   ) +
+#'   theme_minimal() +
+#'   labs(
+#'     title = "Results of malaria tests conducted in 2019",
+#'     subtitle = "Documented cases in Amazonas and of patients residing in the state",
+#'     x = "Result",
+#'     y = "Count"
+#'   )
+#'
+#'
+#'
+#'}
 "malaria_amazonas"
