@@ -63,7 +63,10 @@ This dataset contains medical records of patients who underwent malaria screenin
 }
 \examples{
 \donttest{
-# Barplot of malaria tests results (2019)
+# Bar plot of malaria tests results (2019)
+library(dplyr)
+library(ggplot2)
+
 malaria_amazonas \%>\%
   filter(exam_year == 2019) \%>\%
   count(exam_result) \%>\%

@@ -53,6 +53,9 @@
 #'@examples
 #'\donttest{
 #' # Bar plot of malaria tests results (2019)
+#' library(dplyr)
+#' library(ggplot2)
+#'
 #' malaria_amazonas %>%
 #'   filter(exam_year == 2019) %>%
 #'   count(exam_result) %>%
