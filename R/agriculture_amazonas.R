@@ -1,8 +1,8 @@
-#' agriculture_idam - Plant production data from the Institute of Sustainable Agricultural and Forestry Development of Amazonas - IDAM (2023).
+#' agriculture_amazonas - Plant production data from the Institute of Sustainable Agricultural and Forestry Development of Amazonas - IDAM (2023).
 #'
 #' This database, which is the consolidation of data from IDAM's activity reports, provides crop production data for crops that this institute considers a priority.
 #'
-#' @format ## `agriculture_idam' A data frame with 1072 rows and 13 columns:
+#' @format ## `agriculture_amazonas' A data frame with 1072 rows and 13 columns:
 #' \describe{
 #'   \item{municipality}{Municipality}
 #'   \item{local_unit}{Local Unit of the Institute}
@@ -34,5 +34,5 @@
 #'   sub = "Planted area x Harvested Area"
 #' )
 #' }
-#' 
-"agriculture_idam"
+#'
+"agriculture_amazonas"
