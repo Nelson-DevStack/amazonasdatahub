@@ -25,4 +25,4 @@
 #'
 #' @source https://tede.ufam.edu.br/handle/tede/10627
 #'
-"slr_muni"
+"srl_muni"

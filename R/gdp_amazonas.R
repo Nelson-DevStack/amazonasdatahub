@@ -1,8 +1,8 @@
-#' pib_trimestral -  Gross Domestic Product - GDP of Amazonas
+#' gdp_amazonas -  Gross Domestic Product - GDP of Amazonas
 #'
 #' This database contains information about the Gross Domestic Product (GDP) of the state of Amazonas over the years (from 2010 to 2021). It includes values in R$ 1,000,000.
 #'
-#' @format ## `pib_trimestral' A data frame with 48 rows and 21 columns:
+#' @format ## `gdp_amazonas' A data frame with 48 rows and 21 columns:
 #' \describe{
 #'   \item{year}{Indicates the year in which the GDP info was collected}
 #'   \item{quarter}{Specifies the quarter of the year}
@@ -26,7 +26,7 @@
 #'  \item{domestic_services}{Includes personal services provided within households such as cleaning or caregiving.}
 #'  \item{taxes}{Represents taxes levied on goods and services included in GDP calculations.}
 #' }
-#' 
+#'
 #' @source Scientific Journal of Applied Social and Clinical Science - TIME SERIES ANALYSIS FOR THE QUARTERLY GROSS DOMESTIC PRODUCT OF AMAZONAS
 #'
 #'@examples
@@ -35,7 +35,7 @@
 #' # Loading dplyr and ggplot2
 #' require(dplyr)
 #' require(ggplot2)
-#' 
+#'
 #' # Selecting only year and taxes and ploting
 #' pib_trimestral %>%
 #'   select(year, taxes) %>%
@@ -58,4 +58,4 @@
 #'   )
 #'}
 #'
-"pib_trimestral"
+"gdp_amazonas"
